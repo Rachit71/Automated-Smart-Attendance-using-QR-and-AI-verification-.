@@ -1,0 +1,1 @@
+# Automated-Smart-Attendance-using-QR-and-AI-verification-.
