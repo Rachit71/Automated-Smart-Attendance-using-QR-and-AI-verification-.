@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Face Verification | SmartAttend</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            Smart<span>Attend</span>
+        </div>
+
+        <nav>
+            <a href="student-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="scan-qr.html">
+                Scan QR
+            </a>
+
+            <a href="index.html" class="login-btn">
+                Logout
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- Face Verification Page -->
+    <main class="verification-page">
+
+        <div class="verification-container">
+
+            <!-- Header -->
+            <div class="verification-header">
+
+                <div class="badge">
+                    STEP 2 OF 2
+                </div>
+
+                <h1>
+                    Verify Your
+                    <span>Identity</span>
+                </h1>
+
+                <p>
+                    Position your face inside the frame.
+                    AI will verify your identity before
+                    marking attendance.
+                </p>
+
+            </div>
+
+
+            <!-- Verification Card -->
+            <div class="verification-card">
+
+                <!-- Camera -->
+                <div class="face-camera-container">
+
+                    <video
+                        id="faceCamera"
+                        autoplay
+                        playsinline
+                    ></video>
+
+
+                    <!-- Face Frame -->
+                    <div
+                        class="face-frame"
+                        id="faceFrame"
+                    >
+
+                        <div class="face-corner top-left"></div>
+                        <div class="face-corner top-right"></div>
+                        <div class="face-corner bottom-left"></div>
+                        <div class="face-corner bottom-right"></div>
+
+                        <div
+                            class="face-scan-line"
+                            id="faceScanLine"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- Camera Placeholder -->
+                    <div
+                        class="face-camera-message"
+                        id="faceCameraMessage"
+                    >
+
+                        <div class="camera-icon">
+                            ◉
+                        </div>
+
+                        <h3>
+                            Camera Ready
+                        </h3>
+
+                        <p>
+                            Start the camera to begin
+                            face verification.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Verification Status -->
+                <div
+                    class="verification-status"
+                    id="verificationStatus"
+                >
+
+                    <div class="status-icon">
+                        ◉
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Ready for verification
+                        </strong>
+
+                        <p>
+                            Make sure your face is clearly visible.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Camera Button -->
+                <div class="verification-actions">
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="startFaceCamera"
+                    >
+                        Start Camera
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="verifyFace"
+                    >
+                        Verify My Face
+                    </button>
+
+                </div>
+
+
+                <!-- Demo Button -->
+                <div class="demo-section">
+
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+
+                    <p>
+                        For frontend testing only
+                    </p>
+
+                    <button
+                        type="button"
+                        class="demo-btn"
+                        id="demoVerification"
+                    >
+                        AI Verification Unavailable
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Verification Steps -->
+            <div class="verification-steps">
+
+                <div class="verification-step completed">
+
+                    <div class="step-circle">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            QR Verified
+                        </strong>
+
+                        <span>
+                            Attendance session verified
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="verification-line"></div>
+
+
+                <div class="verification-step active">
+
+                    <div class="step-circle">
+                        2
+                    </div>
+
+                    <div>
+                        <strong>
+                            Face Verification
+                        </strong>
+
+                        <span>
+                            Verify your identity
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="verification-line"></div>
+
+
+                <div class="verification-step">
+
+                    <div class="step-circle">
+                        3
+                    </div>
+
+                    <div>
+                        <strong>
+                            Attendance
+                        </strong>
+
+                        <span>
+                            Mark attendance
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Success Modal -->
+    <div
+        class="success-modal"
+        id="successModal"
+    >
+
+        <div class="success-card">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Attendance Marked!
+            </h2>
+
+            <p>
+                Your identity has been successfully verified
+                and your attendance has been recorded.
+            </p>
+
+            <div class="success-details">
+
+                <div>
+                    <span>Student</span>
+                    <strong>Student Name</strong>
+                </div>
+
+                <div>
+                    <span>Subject</span>
+                    <strong>Computer Networks</strong>
+                </div>
+
+                <div>
+                    <span>Status</span>
+                    <strong class="status-present">
+                        Present
+                    </strong>
+                </div>
+
+            </div>
+
+            <a
+                href="student-dashboard.html"
+                class="primary-btn"
+            >
+                Go to Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            Smart<span>Attend</span>
+        </div>
+
+        <p>
+            AI-powered automated attendance system
+            using QR & Computer Vision.
+        </p>
+
+        <p class="copyright">
+            © 2026 SmartAttend. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Face camera logic: separate file so Helmet CSP permits it -->
+    <script src="/js/face-verification.js" defer></script>
+
+</body>
+
+</html>

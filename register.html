@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | SmartAttend</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            Smart<span>Attend</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#features">Features</a>
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Registration Section -->
+    <main class="register-page">
+
+        <div class="register-container">
+
+            <!-- Left Information -->
+            <div class="register-info">
+
+                <div class="badge">
+                    STUDENT REGISTRATION
+                </div>
+
+                <h1>
+                    Create Your
+                    <span>SmartAttend</span>
+                    Account
+                </h1>
+
+                <p>
+                    Register your details and face so that the
+                    system can verify your identity during
+                    attendance.
+                </p>
+
+
+                <div class="register-points">
+
+                    <div>
+                        <span>✓</span>
+                        <p>Secure student account</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>One-time face registration</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Fast QR + AI verification</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Registration Form -->
+            <div class="register-card">
+
+                <div class="form-header">
+
+                    <h2>Create Account</h2>
+
+                    <p>
+                        Fill in your details to register
+                    </p>
+
+                </div>
+
+
+                <form id="registerForm">
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+
+                        <label for="fullname">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Student ID -->
+                    <div class="form-group">
+
+                        <label for="studentId">
+                            Student ID / Roll Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentId"
+                            name="studentId"
+                            placeholder="Enter your student ID"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Course -->
+                    <div class="form-group">
+
+                        <label for="course">
+                            Course / Department
+                        </label>
+
+                        <input
+                            type="text"
+                            id="course"
+                            name="course"
+                            placeholder="e.g. B.Tech CSE"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Face Registration -->
+                    <div class="face-registration">
+
+                        <div class="face-header">
+
+                            <h3>
+                                Face Registration
+                            </h3>
+
+                            <span>
+                                Required
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Capture your face using your camera
+                            for AI verification.
+                        </p>
+
+
+                        <div class="camera-box">
+
+                            <div class="camera-placeholder">
+
+                                <div class="camera-icon">
+                                    ◉
+                                </div>
+
+                                <p>
+                                    Camera Preview
+                                </p>
+
+                                <small>
+                                    Your camera will appear here
+                                </small>
+
+                            </div>
+
+                            <video
+                                id="camera"
+                                autoplay
+                                playsinline
+                                style="display:none;"
+                            ></video>
+
+                        </div>
+
+
+                        <div class="camera-buttons">
+
+                            <button
+                                type="button"
+                                id="startCamera"
+                                class="secondary-btn"
+                            >
+                                Start Camera
+                            </button>
+
+                            <button
+                                type="button"
+                                id="captureFace"
+                                class="primary-btn"
+                            >
+                                Capture Face
+                            </button>
+
+                        </div>
+
+                        <canvas
+                            id="faceCanvas"
+                            style="display:none;"
+                        ></canvas>
+
+                        <p
+                            id="faceStatus"
+                            class="face-status"
+                        >
+                            Face not captured
+                        </p>
+
+                    </div>
+
+
+                    <!-- Terms -->
+                    <div class="terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            <span>
+                                I agree to the
+                                <a href="#">
+                                    terms and conditions
+                                </a>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Register -->
+                    <button
+                        type="submit"
+                        class="primary-btn register-submit"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+
+                <!-- Login Link -->
+                <div class="register-link">
+
+                    <p>
+                        Already have an account?
+                        <a href="login.html">
+                            Login here
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <!-- Home -->
+                <div class="back-home">
+
+                    <a href="index.html">
+                        ← Back to Home
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            Smart<span>Attend</span>
+        </div>
+
+        <p>
+            AI-powered automated attendance system
+            using QR & Computer Vision.
+        </p>
+
+        <p class="copyright">
+            © 2026 SmartAttend. All Rights Reserved.
+        </p>
+
+    </footer>
+    <!-- Camera and registration handlers (external file, CSP-compatible) -->
+    <script src="/js/register.js" defer></script>
+
+</body>
+
+</html>

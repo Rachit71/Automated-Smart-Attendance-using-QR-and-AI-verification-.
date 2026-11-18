@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scan QR | SmartAttend</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            Smart<span>Attend</span>
+        </div>
+
+        <nav>
+            <a href="student-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="scan-qr.html" class="active">
+                Scan QR
+            </a>
+
+            <a href="index.html" class="login-btn">
+                Logout
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- QR Scanner Page -->
+    <main class="scanner-page">
+
+        <div class="scanner-container">
+
+            <!-- Header -->
+            <div class="scanner-header">
+
+                <div class="badge">
+                    ATTENDANCE VERIFICATION
+                </div>
+
+                <h1>
+                    Scan Attendance
+                    <span>QR Code</span>
+                </h1>
+
+                <p>
+                    Scan the QR code displayed by your teacher
+                    to start attendance verification.
+                </p>
+
+            </div>
+
+
+            <!-- Scanner Card -->
+            <div class="scanner-card">
+
+                <!-- Camera Area -->
+                <div class="qr-camera-container">
+
+                    <video
+                        id="qrCamera"
+                        autoplay
+                        playsinline
+                    ></video>
+
+                    <div class="scanner-overlay">
+
+                        <div class="corner top-left"></div>
+                        <div class="corner top-right"></div>
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+
+                        <div class="scan-line"></div>
+
+                    </div>
+
+
+                    <!-- Camera Placeholder -->
+                    <div
+                        class="camera-message"
+                        id="cameraMessage"
+                    >
+
+                        <div class="camera-icon">
+                            ▣
+                        </div>
+
+                        <h3>
+                            Camera Not Started
+                        </h3>
+
+                        <p>
+                            Click the button below to
+                            start scanning.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Scanner Status -->
+                <div
+                    class="scanner-status"
+                    id="scannerStatus"
+                >
+                    Ready to scan
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="scanner-actions">
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="startScanner"
+                    >
+                        Start Camera
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="stopScanner"
+                    >
+                        Stop Camera
+                    </button>
+
+                </div>
+
+
+                <!-- Demo Scan -->
+                <div class="demo-section">
+
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+
+                    <p>
+                        If the camera cannot scan, you can enter valid QR data manually.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="demo-btn"
+                        id="demoScan"
+                    >
+                        Simulate QR Scan
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Instructions -->
+            <div class="scanner-instructions">
+
+                <div class="instruction">
+
+                    <div class="instruction-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>
+                            Open Camera
+                        </h3>
+
+                        <p>
+                            Allow camera permission when requested.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="instruction">
+
+                    <div class="instruction-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h3>
+                            Scan QR
+                        </h3>
+
+                        <p>
+                            Keep the classroom QR code inside
+                            the scanning box.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="instruction">
+
+                    <div class="instruction-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h3>
+                            Verify Face
+                        </h3>
+
+                        <p>
+                            Your face will be verified before
+                            attendance is marked.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            Smart<span>Attend</span>
+        </div>
+
+        <p>
+            AI-powered automated attendance system
+            using QR & Computer Vision.
+        </p>
+
+        <p class="copyright">
+            © 2026 SmartAttend. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- QR camera and detection logic (external script for CSP security) -->
+    <!-- Local QR decoder: install with INSTALL_QR_LIBRARY.cmd (works with Helmet CSP). -->
+    <script src="/js/vendor/node_modules/jsqr/dist/jsQR.js" defer></script>
+    <script src="/js/scan-qr.js" defer></script>
+
+</body>
+
+</html>

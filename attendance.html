@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Attendance | SmartAttend</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/attendance.css">
+  <script src="/js/attendance.js" defer></script>
+</head>
+<body class="attendance-page">
+  <header class="attendance-nav">
+    <a class="attendance-logo" href="/student-dashboard.html">Smart<span>Attend</span></a>
+    <nav aria-label="Main navigation">
+      <a href="/student-dashboard.html">Dashboard</a>
+      <a href="/scan-qr.html">Scan QR</a>
+      <a href="/attendance.html" aria-current="page">My Attendance</a>
+    </nav>
+  </header>
+
+  <main class="attendance-main">
+    <section class="attendance-heading">
+      <div>
+        <p class="attendance-eyebrow">STUDENT PORTAL</p>
+        <h1>My Attendance</h1>
+        <p>View attendance records securely stored in SmartAttend.</p>
+      </div>
+      <button id="refreshAttendance" class="attendance-refresh" type="button">Refresh records</button>
+    </section>
+
+    <div class="attendance-info" role="note">
+      <strong>Current project limitation:</strong> Face AI verification/enrollment is not integrated yet. Only verified, saved records would appear here; scanning a QR code alone does not mark attendance.
+    </div>
+
+    <section class="attendance-summary" aria-label="Attendance summary">
+      <div class="attendance-stat">
+        <span>Recorded attendance</span>
+        <strong id="recordCount">—</strong>
+        <small>Saved records</small>
+      </div>
+      <div class="attendance-stat">
+        <span>Latest record</span>
+        <strong id="latestRecord">—</strong>
+        <small>Most recent entry</small>
+      </div>
+    </section>
+
+    <section class="attendance-panel" aria-labelledby="recordsTitle">
+      <div class="attendance-panel-head">
+        <div>
+          <h2 id="recordsTitle">Attendance history</h2>
+          <p>Loaded from your account, not sample data</p>
+        </div>
+      </div>
+      <p id="attendanceStatus" class="attendance-message" role="status" aria-live="polite">Loading your records...</p>
+      <div id="attendanceTableWrap" class="attendance-table-wrap" hidden>
+        <table class="attendance-history-table">
+          <thead>
+            <tr><th scope="col">Subject</th><th scope="col">Class</th><th scope="col">Date &amp; time</th><th scope="col">Status</th></tr>
+          </thead>
+          <tbody id="attendanceRows"></tbody>
+        </table>
+      </div>
+      <a id="attendanceLoginLink" href="/login.html" class="attendance-login" hidden>Go to Login</a>
+    </section>
+
+    <a href="/student-dashboard.html" class="attendance-back">← Back to Dashboard</a>
+  </main>
+</body>
+</html>

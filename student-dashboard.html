@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | SmartAttend</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            Smart<span>Attend</span>
+        </div>
+
+        <nav>
+            <a href="student-dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="scan-qr.html">
+                Scan QR
+            </a>
+
+            <a href="index.html" class="login-btn">
+                Logout
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- Dashboard -->
+    <main class="dashboard-page">
+
+        <!-- Welcome -->
+        <section class="dashboard-header">
+
+            <div>
+
+                <div class="badge">
+                    STUDENT DASHBOARD
+                </div>
+
+                <h1>
+                    Welcome back,
+                    <span>Student</span> 👋
+                </h1>
+
+                <p>
+                    Track your attendance and mark your
+                    attendance using QR + AI verification.
+                </p>
+
+            </div>
+
+
+            <a href="scan-qr.html" class="primary-btn">
+                Scan QR & Mark Attendance
+            </a>
+
+        </section>
+
+
+        <!-- Student Profile -->
+        <section class="student-profile">
+
+            <div class="profile-avatar">
+                S
+            </div>
+
+            <div class="profile-info">
+
+                <h2>Student Name</h2>
+
+                <p>
+                    Roll No: <strong>STU2026001</strong>
+                </p>
+
+                <p>
+                    B.Tech Computer Science & Engineering
+                </p>
+
+            </div>
+
+            <div class="profile-status">
+                <span></span>
+                Active Student
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="dashboard-stats">
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-icon">
+                    %
+                </div>
+
+                <div>
+                    <span>Overall Attendance</span>
+                    <h2>92%</h2>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Present</span>
+                    <h2>46</h2>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-icon">
+                    ×
+                </div>
+
+                <div>
+                    <span>Absent</span>
+                    <h2>4</h2>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-icon">
+                    #
+                </div>
+
+                <div>
+                    <span>Total Classes</span>
+                    <h2>50</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Dashboard Grid -->
+        <section class="dashboard-grid">
+
+
+            <!-- Mark Attendance -->
+            <div class="dashboard-card mark-attendance">
+
+                <div class="card-title">
+
+                    <div>
+                        <h2>Mark Attendance</h2>
+
+                        <p>
+                            Scan the classroom QR code
+                            to continue.
+                        </p>
+                    </div>
+
+                    <div class="card-icon">
+                        QR
+                    </div>
+
+                </div>
+
+
+                <div class="qr-action">
+
+                    <div class="qr-illustration">
+                        ▦
+                    </div>
+
+                    <h3>
+                        Scan Attendance QR
+                    </h3>
+
+                    <p>
+                        After scanning, AI will verify
+                        your face before marking attendance.
+                    </p>
+
+                    <a
+                        href="scan-qr.html"
+                        class="primary-btn"
+                    >
+                        Open QR Scanner
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Attendance Overview -->
+            <div class="dashboard-card">
+
+                <div class="card-title">
+
+                    <div>
+                        <h2>Attendance Overview</h2>
+
+                        <p>
+                            Your current attendance status
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="attendance-overview">
+
+                    <div class="attendance-percentage">
+                        <strong>92%</strong>
+                        <span>Overall</span>
+                    </div>
+
+
+                    <div class="attendance-details">
+
+                        <div>
+                            <span class="present-dot"></span>
+                            Present
+                            <strong>46</strong>
+                        </div>
+
+                        <div>
+                            <span class="absent-dot"></span>
+                            Absent
+                            <strong>4</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        style="width: 92%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recent Attendance -->
+        <section class="dashboard-card recent-attendance">
+
+            <div class="card-title">
+
+                <div>
+                    <h2>Recent Attendance</h2>
+
+                    <p>
+                        Your latest attendance records
+                    </p>
+                </div>
+
+                <a href="attendance.html">
+                    View All →
+                </a>
+
+            </div>
+
+
+            <div class="attendance-table">
+
+                <div class="table-row table-heading">
+
+                    <span>Date</span>
+                    <span>Subject</span>
+                    <span>Time</span>
+                    <span>Status</span>
+
+                </div>
+
+
+                <div class="table-row">
+
+                    <span>21 Sep 2026</span>
+
+                    <span>Computer Networks</span>
+
+                    <span>10:00 AM</span>
+
+                    <span class="status-present">
+                        Present
+                    </span>
+
+                </div>
+
+
+                <div class="table-row">
+
+                    <span>20 Sep 2026</span>
+
+                    <span>Database Management</span>
+
+                    <span>11:00 AM</span>
+
+                    <span class="status-present">
+                        Present
+                    </span>
+
+                </div>
+
+
+                <div class="table-row">
+
+                    <span>19 Sep 2026</span>
+
+                    <span>Operating Systems</span>
+
+                    <span>09:00 AM</span>
+
+                    <span class="status-absent">
+                        Absent
+                    </span>
+
+                </div>
+
+
+                <div class="table-row">
+
+                    <span>18 Sep 2026</span>
+
+                    <span>Data Structures</span>
+
+                    <span>02:00 PM</span>
+
+                    <span class="status-present">
+                        Present
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            Smart<span>Attend</span>
+        </div>
+
+        <p>
+            AI-powered automated attendance system
+            using QR & Computer Vision.
+        </p>
+
+        <p class="copyright">
+            © 2026 SmartAttend. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
+
